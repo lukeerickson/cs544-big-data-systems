@@ -1,0 +1,14 @@
+{
+  "score": 100,
+  "full_score": 100,
+  "tests": {
+    "os_test": "PASS (15/15)",
+    "cpu_test": "PASS (10/10)",
+    "docker_test": "PASS (15/15)",
+    "compose_test": "PASS (10/10)",
+    "executable_test": "PASS (10/10)",
+    "shebang_test": "PASS (15/15)",
+    "build_test": "PASS (10/10)",
+    "run_test": "PASS (15/15)"
+  }
+}

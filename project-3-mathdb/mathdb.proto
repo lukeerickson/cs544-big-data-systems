@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+service MathDb {
+	rpc Set (SetRequest) returns (SetResponse) {}
+	rpc Get (GetRequest) returns (GetResponse) {}
+	rpc Add (BinaryOpRequest) returns (BinaryOpResponse) {}
+	rpc Sub (BinaryOpRequest) returns (BinaryOpResponse) {}
+	rpc Mult (BinaryOpRequest) returns (BinaryOpResponse) {}
+	rpc Div (BinaryOpRequest) returns (BinaryOpResponse) {}
+}
+
+message SetRequest {
+	string key = 1;
+	float value = 2;
+}
+
+message SetResponse {
+	string error = 1;
+}
+
+message GetRequest {
+	string key = 1;
+}
+
+message GetResponse {
+	float value = 1;
+	string error = 2;
+}
+
+message BinaryOpRequest {
+	string key_a = 1;
+	string key_b = 2;
+}
+
+message BinaryOpResponse {
+	float value = 1;
+	bool cache_hit = 2;
+	string error = 3;
+}
