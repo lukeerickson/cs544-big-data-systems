@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service Report {
+	rpc RecordTemp(RecordTempRequest) returns (RecordTempReply) {}
+}
+
+message RecordTempRequest {
+	string date = 1;
+	double degrees = 2;
+}
+
+message RecordTempReply {
+	string error = 1;
+}
+
